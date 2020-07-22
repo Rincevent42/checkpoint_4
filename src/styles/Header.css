@@ -1,0 +1,9 @@
+.header {
+  height: 40px;
+  background-color: orange;
+}
+
+.header .title {
+  padding-left: 1rem;
+  padding-top: 7px;
+}
