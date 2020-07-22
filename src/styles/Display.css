@@ -1,6 +1,7 @@
 .display {
-  width: 100%;
-  margin: 2rem;
+  width: 100wv;
+  height: 100hv;
+  margin: 2rem 0;
 }
 
 .display p {
@@ -9,4 +10,39 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+.display .nav-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+.display .nav-main nav p {
+  color: green;
+}
+
+.display .nav-main nav p {
+  color: green;
+}
+
+.display .nav-main nav {
+  order: 0;
+  flex-grow: 1;
+  align-self: flex-end;
+
+  /* height: 50hv; */
+  border: 1px red solid;
+}
+
+.display .nav-main main {
+  order: 0;
+  flex-grow: 10;
+  align-self: flex-start;
+
+  /* height: 600px; */
+  border: 1px blue solid;
 }

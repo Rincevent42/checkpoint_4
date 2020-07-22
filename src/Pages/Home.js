@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import Slideshow from '../components/SlideShow';
+import FilterContext from '../components/FilterContext';
 import '../styles/Home.css';
 
-const cars = require('../voitures.json');
+
 
 // console.log(cars.data[0].url_photo);
 
@@ -16,17 +17,19 @@ const s = {
   footer: "flex1 fCenter"
 };
 
-// ===========================================
-// SLIDES DATA
-// ===========================================
-const slides = [
-  require('../photos/' + cars.data[0].url_photo),
-  require('../photos/' + cars.data[1].url_photo),
-  require('../photos/' + cars.data[2].url_photo),
-  require('../photos/' + cars.data[3].url_photo),
-  require('../photos/' + cars.data[4].url_photo)];
-
 export default function Home (props) {
+
+  const { cars, updateCars } = useContext(FilterContext);
+
+  useEffect(() => {
+    const cars = require('../voitures.json');
+    updateCars(cars.data);
+  }, []);
+
+  // ===========================================
+  // SLIDES DATA
+  // ===========================================
+  const slides = cars.map(car => require('../photos/' + car.url_photo));
 
   return (
     <div className='home'>
