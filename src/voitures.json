@@ -16,7 +16,8 @@
     "date_of_purchase": "2018-11-27",
     "price": "24.00",
     "currency": "EUR",
-    "dealer": "Norev SA"
+    "dealer": "Norev SA",
+    "scale": "43"
   },
   {
     "id" : "211",
@@ -35,7 +36,8 @@
     "date_of_purchase": "2018-11-27",
     "price": "24.00",
     "currency": "EUR",
-    "dealer": "Norev SA"
+    "dealer": "Norev SA",
+    "scale": "43"
   },
   {
     "id" : "213",
@@ -54,7 +56,8 @@
     "date_of_purchase": "2018-11-27",
     "price": "18.00",
     "currency": "EUR",
-    "dealer": "Amazon FR"
+    "dealer": "Amazon FR",
+    "scale": "43"
   },
   {
     "id" : "214",
@@ -73,7 +76,8 @@
     "date_of_purchase": "2018-11-29",
     "price": "35.00",
     "currency": "EUR",
-    "dealer": "Tacot"
+    "dealer": "Tacot",
+    "scale": "43"
   },
   {
     "id" : "215",
@@ -92,6 +96,7 @@
     "date_of_purchase": "2018-11-29",
     "price": "31.00",
     "currency": "EUR",
-    "dealer": "Tacot"
+    "dealer": "Tacot",
+    "scale": "32"
   } ]
 }
