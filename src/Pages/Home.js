@@ -38,11 +38,11 @@ export default function Home (props) {
       </div>
       <div className='novelties'>
         <p>Nouveautés</p>
-        <div className={s.container}>
+        { /* <div className={s.container}>
           <div className={s.main}>
             <Slideshow slides={slides} />
           </div>
-        </div>
+        </div> */ }
       </div>
     </div>
   );

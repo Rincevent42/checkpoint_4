@@ -1,7 +1,8 @@
 .display {
-  width: 100wv;
-  height: 100hv;
+  width: 100vw;
+  height: calc(100% - 8rem);
   margin: 2rem 0;
+  background-color: aqua;
 }
 
 .display p {
@@ -19,6 +20,8 @@
   justify-content: space-between;
   align-items: stretch;
   align-content: flex-start;
+  background-color: blueviolet;
+  height: 100%;
 }
 
 .display .nav-main nav p {
@@ -32,17 +35,14 @@
 .display .nav-main nav {
   order: 0;
   flex-grow: 1;
-  align-self: flex-end;
-
-  /* height: 50hv; */
-  border: 1px red solid;
+  align-self: flex-start;
+  background-color: red;
 }
 
 .display .nav-main main {
   order: 0;
   flex-grow: 10;
   align-self: flex-start;
-
-  /* height: 600px; */
-  border: 1px blue solid;
+  height: 100%;
+  background-color: yellowgreen;
 }
