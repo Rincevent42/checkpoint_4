@@ -13,5 +13,8 @@ export default function Carousel (props) {
 
   const carsList = (filter !== 'all' ? cars.filter(car => car.scale === filter) : cars);
 
+  // Si le tableau carsList est vide => retour à l'appelant
+  if (!carsList.length) return false;
+
   return carsList.map(car => car.url_photo && <div key={car.id}><a onClick={() => handleClickToDetails(car.id)}><img className='photo' src={`/photos/${car.url_photo}`} alt={car.model} /></a></div>);
 }

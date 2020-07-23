@@ -1,6 +1,19 @@
 .details {
-  width: 100%;
+  width: 700px;
   color: black;
   margin-top: 1.5rem;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.details-item1 .details-item2 {
+  align-self: flex-start;
 }
