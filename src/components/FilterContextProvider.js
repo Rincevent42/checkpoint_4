@@ -6,7 +6,8 @@ class FilterContextProvider extends React.Component {
     super(props);
     this.state = {
       filter: '',
-      cars: []
+      cars: [],
+      novelties: []
     };
   }
 
@@ -14,8 +15,14 @@ class FilterContextProvider extends React.Component {
     this.setState({ filter });
   };
   
+  // Liste des véhicules
   updateCars = (cars) => {
     this.setState({ cars });
+  }
+
+  // Seulement la liste des dernières acquisitions
+  updateNovelties = (novelties) => {
+    this.setState({ novelties });
   }
 
   render () {
@@ -23,7 +30,8 @@ class FilterContextProvider extends React.Component {
       <FilterContext.Provider value={{
         ...this.state,
         updateFilter: this.updateFilter,
-        updateCars: this.updateCars
+        updateCars: this.updateCars,
+        updateNovelties: this.updateNovelties
       }}
       >
         {this.props.children}

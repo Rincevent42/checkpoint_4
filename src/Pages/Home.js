@@ -1,8 +1,9 @@
 import React, { useEffect, useContext } from 'react';
 import Slideshow from '../components/SlideShow';
 import FilterContext from '../components/FilterContext';
+import axios from 'axios';
 import '../styles/Home.css';
-
+require('dotenv').config();
 
 
 // console.log(cars.data[0].url_photo);
@@ -19,17 +20,29 @@ const s = {
 
 export default function Home (props) {
 
-  const { cars, updateCars } = useContext(FilterContext);
+  // const { cars, updateCars } = useContext(FilterContext);
+  const { novelties, updateNovelties } = useContext(FilterContext);
 
   useEffect(() => {
-    const cars = require('../voitures.json');
+    /* const cars = require('../voitures.json');
     updateCars(cars.data);
+    console.log(cars.data); */
+
+    axios.get('http://localhost:3000/cars/novelties')
+      .then(data => {
+        updateNovelties(data.data.data);
+      })
+      .catch(error => {
+        console.error('Erreur durant la récupération des nouveautés :', error);
+      });
+
   }, []);
 
   // ===========================================
   // SLIDES DATA
   // ===========================================
-  const slides = cars.map(car => require('../photos/' + car.url_photo));
+  const slides = novelties.map(car => require('../photos/' + car.url_photo));
+  console.log('Slides : ', slides);
 
   return (
     <div className='home'>
@@ -38,11 +51,11 @@ export default function Home (props) {
       </div>
       <div className='novelties'>
         <p>Nouveautés</p>
-        { /* <div className={s.container}>
+        <div className={s.container}>
           <div className={s.main}>
             <Slideshow slides={slides} />
           </div>
-        </div> */ }
+        </div>
       </div>
     </div>
   );

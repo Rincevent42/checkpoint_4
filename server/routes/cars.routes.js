@@ -1,7 +1,10 @@
 const CarsController = require('../controllers/cars.controller.js');
 const router = require('express').Router();
 
-// Validation d'un nouveau freelance par son email
+// Récupération des nouveautés
+router.get('/novelties', CarsController.getNovelties);
+
+// Récupération de tous les véhicules
 router.get('/', CarsController.findAll);
 
 module.exports = router;

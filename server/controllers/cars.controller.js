@@ -12,6 +12,18 @@ class CarsController {
       });
     }
   }
+
+  static async getNovelties (req, res) {
+    try {
+      const data = (await Car.getNovelties()).map(c => c);
+      res.send({ data });
+    } catch (err) {
+      res.status(500).send({
+        errorMessage: err.message || 'Some error occurred while retrieving users.'
+      });
+    }
+  }
+
 }
 
 module.exports = CarsController;

@@ -1,13 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import FilterContext from '../components/FilterContext';
 import DisplayCars from '../components/DisplayCars';
+import axios from 'axios';
 import '../styles/Display.css';
 
 export default function Display (props) {
-
+  const { cars, updateCars } = useContext(FilterContext);
   const { filter } = useContext(FilterContext);
-
   console.log('Filter : ', filter);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/cars')
+      .then(data => {
+        updateCars(data.data.data);
+      })
+      .catch(error => {
+        console.error('Erreur durant la récupération des données :', error);
+      });
+  }, [updateCars, filter]);
 
   // Création du titre de la page en fonction du filtrage
   let titrePage = 'Toutes les miniatures';
