@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
 }
 
 body {
@@ -29,13 +35,7 @@ body {
   text-align: center;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Quicksand", sans-serif;
-    color: #fff;
-}
+
 
 /*====== WIDTH ======*/
 .screenW {

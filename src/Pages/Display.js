@@ -37,7 +37,6 @@ export default function Display (props) {
           </p>
         </nav>
         <main>
-          <p>Affichage des véhicules</p>
           <cars>
             <DisplayCars />
           </cars>
