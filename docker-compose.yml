@@ -24,7 +24,7 @@ services:
     environment:
       - DB_USER=root
       - DB_PASS=root
-      - DB_NAME=modemcars_api_database
+      - DB_NAME=modelcars
       - DB_HOST=db
       - DB_PORT=3306
     ports:
