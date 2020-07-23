@@ -8,7 +8,7 @@ class Car {
 
   // Récupère toutes les voitures de la base de donnée
   static async getNovelties () {
-    return db.query('SELECT * FROM car ORDER BY date_of_purchase DESC LIMIT 5');
+    return db.query('SELECT * FROM car ORDER BY date_of_purchase DESC LIMIT 10');
   }
 
   // Récupère le véhicule dont l'id est donné en paramètre d'URL
