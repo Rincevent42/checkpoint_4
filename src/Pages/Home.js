@@ -35,14 +35,13 @@ export default function Home (props) {
       .catch(error => {
         console.error('Erreur durant la récupération des nouveautés :', error);
       });
-
-  }, []);
+  }, [updateNovelties]);
 
   // ===========================================
   // SLIDES DATA
   // ===========================================
-  const slides = novelties.map(car => require('../photos/' + car.url_photo));
-  // console.log('Slides : ', slides);
+  const slides = novelties.map(car => `/photos/${car.url_photo}`);
+  console.log('Slides : ', slides);
 
   return (
     <div className='home'>

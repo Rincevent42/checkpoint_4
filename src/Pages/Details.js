@@ -18,12 +18,16 @@ export default function Details (props) {
       });
   }, []);
 
-    const title = 'Détails pour ' + cars.mark + ' ' + cars.model + ' (' + cars.year + ')';
+  console.log(cars);
+  const title = 'Détails pour ' + cars.mark + ' ' + cars.model + ' (' + cars.year + ')';
+  /* const urlPhotoAfterCodingForReact = require('../photos/' + cars.url_photo); */
+  console.log(cars.url_photo);
 
   return (
     <div className='details'>
       {title}
+      <div key={cars.id}><img className='photo' src={`/photos/${cars.url_photo}`} alt={cars.model} /></div>
     </div>
     
-    );
+  );
 }

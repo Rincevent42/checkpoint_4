@@ -13,5 +13,5 @@ export default function Carousel (props) {
 
   const carsList = (filter !== 'all' ? cars.filter(car => car.scale === filter) : cars);
 
-  return carsList.map(car => car.url_photo && <div key={car.id}><a onClick={() => handleClickToDetails(car.id)}><img className='photo' src={require('../photos/' + car.url_photo)} alt={car.model} /></a></div>);
+  return carsList.map(car => car.url_photo && <div key={car.id}><a onClick={() => handleClickToDetails(car.id)}><img className='photo' src={`/photos/${car.url_photo}`} alt={car.model} /></a></div>);
 }
