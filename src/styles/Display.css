@@ -63,3 +63,8 @@ cars {
   align-self: center;
 }
 
+.photoLabel {
+  color: black;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
