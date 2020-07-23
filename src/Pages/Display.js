@@ -17,7 +17,7 @@ export default function Display (props) {
       .catch(error => {
         console.error('Erreur durant la récupération des données :', error);
       });
-  }, [updateCars, filter]);
+  }, [updateCars]);
 
   // Création du titre de la page en fonction du filtrage
   let titrePage = 'Toutes les miniatures';
