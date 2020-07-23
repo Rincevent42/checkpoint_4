@@ -1,9 +1,9 @@
 require('dotenv').config();
 const express = require('express');
-const swaggerUi = require('swagger-ui-express');
+// const swaggerUi = require('swagger-ui-express');
 const cors = require('cors');
-const YAML = require('yamljs');
-const swaggerDocument = YAML.load('./docs/swagger.yaml');
+// const YAML = require('yamljs');
+// const swaggerDocument = YAML.load('./docs/swagger.yaml');
 // const extractToken = require('./middlewares/extractToken');
 
 const app = express();
@@ -14,11 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 // middlewares
 app.use(express.json());
 app.use(cors());
-app.use('/uploads', express.static('uploads'));
 
-if (process.env.NODE_ENV !== 'production') {
+/* if (process.env.NODE_ENV !== 'production') {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-}
+} */
 app.use('/cars', require('./server/routes/cars.routes.js'));
 
 // set port, listen for requests
