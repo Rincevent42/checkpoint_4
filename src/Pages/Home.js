@@ -42,7 +42,7 @@ export default function Home (props) {
   // SLIDES DATA
   // ===========================================
   const slides = novelties.map(car => require('../photos/' + car.url_photo));
-  console.log('Slides : ', slides);
+  // console.log('Slides : ', slides);
 
   return (
     <div className='home'>

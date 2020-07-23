@@ -5,9 +5,9 @@ import axios from 'axios';
 import '../styles/Display.css';
 
 export default function Display (props) {
-  const { cars, updateCars } = useContext(FilterContext);
+  const { updateCars } = useContext(FilterContext);
   const { filter } = useContext(FilterContext);
-  console.log('Filter : ', filter);
+  // console.log('Filter : ', filter);
 
   useEffect(() => {
     axios.get('http://localhost:3000/cars')
@@ -41,11 +41,11 @@ export default function Display (props) {
         {titrePage}
       </p>
       <div className='nav-main'>
-        <nav>
+        {/* <nav>
           <p>
           Menu de navigation
           </p>
-        </nav>
+        </nav> */}
         <main>
           <cars>
             <DisplayCars />

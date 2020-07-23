@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import FilterContextProvider from './components/FilterContextProvider';
 import Display from './Pages/Display';
+import Details from './Pages/Details';
 
 function App () {
   return (
@@ -14,8 +14,8 @@ function App () {
         <Switch>
           <Route exact path='/'><Home /></Route>
           <Route path='/display' component={Display} />
+          <Route path='/details/:id' component={Details} />
         </Switch>
-        <Footer />
       </Router>
     </FilterContextProvider>
   );

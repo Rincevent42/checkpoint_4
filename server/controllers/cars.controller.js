@@ -24,6 +24,18 @@ class CarsController {
     }
   }
 
+  static async findOneById (req, res) {
+    try {
+      const data = await Car.findById(req.params.id);
+      res.send({ data });
+    } catch (err) {
+      if (err.kind === 'not_found') {
+        res.status(404).send({ errorMessage: `Vehicule with id ${req.params.id} not found.` });
+      } else {
+        res.status(500).send({ errorMessage: 'Error retrieving vehicule with id ' + req.params.id });
+      }
+    }
+  }
 }
 
 module.exports = CarsController;

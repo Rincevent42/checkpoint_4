@@ -1,6 +1,6 @@
 .display {
   width: 100vw;
-  height: calc(100% - 8rem);
+  height: 100%;
   margin: 2rem 0;
   /* background-color: aqua; */
 }
@@ -36,6 +36,8 @@
   order: 0;
   flex-grow: 1;
   align-self: flex-start;
+  min-width: 200px;
+  max-width: 300px;
   background-color: red;
 }
 
@@ -55,7 +57,9 @@ cars {
   align-items: baseline;
   align-content: flex-start;
 }
+
 .display .nav-main .photo {
-  width: 320px;
-  align-self: baseline;
+  width: 240px;
+  align-self: center;
 }
+
