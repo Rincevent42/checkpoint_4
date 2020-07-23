@@ -1,0 +1,32 @@
+.header {
+  height: 2rem;
+  background-color: orange;
+}
+
+.header .title {
+  padding-left: 1rem;
+  padding-top: 7px;
+}
+
+.header .ul-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0rem;
+  color: black;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.header .li-items {
+  align-self: stretch;
+}
+
+.header .title ul :hover {
+  color: white;
+  font-weight: 400;
+}

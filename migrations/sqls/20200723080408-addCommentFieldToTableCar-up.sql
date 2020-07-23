@@ -1,0 +1,2 @@
+ALTER TABLE `car` 
+ADD COLUMN `comment` VARCHAR(255) NULL AFTER `scale`;
